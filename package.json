@@ -1,0 +1,18 @@
+{
+  "name": "ticket-bot",
+  "version": "1.0.0",
+  "description": "shuruhatik",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "discord-modal": "^1.0.3",
+    "eris": "github:abalabahaha/eris#dev",
+    "st.db": "^4.0.7"
+  }
+}
