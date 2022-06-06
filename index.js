@@ -1,4 +1,3 @@
-import { channel } from "diagnostics_channel";
 import Eris from "eris";
 import Database from "st.db"
 const counts_db = new Database({ path: "count" })
