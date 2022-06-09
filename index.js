@@ -18,11 +18,7 @@ bot.on("ready", async () => {
     console.log("Bot is Ready!")
     await SyncCommands(bot)
 })
-bot.on("messageCreate", async (message) => {
-    if (message.content == "l") {
-        console.log(message.channel)
-    }
-})
+
 bot.on("interactionCreate", async (interaction) => {
     if (interaction.type == 5) {
         if (interaction.data.custom_id.startsWith("closeticket")) {
