@@ -1,29 +1,6 @@
 [
     {
         "type": 1,
-        "name": "clear",
-        "dm_permission": false,
-        "description": "تصفير التذاكر المستلمه لدي الجميع او لشخص محدد",
-        "options":[{
-            "name":"user",
-            "type":6,
-            "description":"اختار الشخص الذي تريد تصفير عدد التذاكر الذي استلمه",
-            "required": false
-        }]
-    },{
-        "type": 1,
-        "name": "counts",
-        "dm_permission": false,
-        "description": "معرفة عدد التذاكر الذي استلمته انت او لشخص ما",
-        "options":[{
-            "name":"user",
-            "type":6,
-            "description":"قم باختيار الشخص الذي تريد معرفة كم تذكرة استلم",
-            "required": false
-        }]
-    },
-    {
-        "type": 1,
         "name": "setup",
         "dm_permission": false,
         "description": "تعيين نظام التذاكر",
