@@ -16,7 +16,7 @@ const bot = new Eris(config["token"], {
 bot.on("error", console.log)
 bot.on("ready", async () => {
     console.log("\u001b[32m▶▷ \u001b[0m\u001b[0m\u001b[40;1m\u001b[34;1mBot Ready!\u001b[0m \u001b[32m◁◀ \u001b[0m");
-    await bot.editStatus("online", { type: 0, name: "By Shuruhatik" || config["status"] })
+    await bot.editStatus("online", { type: 0, name: config["status"] || "By Shuruhatik" })
     await bot.bulkEditCommands(slashCommands)
 })
 
