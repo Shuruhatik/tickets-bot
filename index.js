@@ -5,7 +5,7 @@ const user_tickets_db = new Database("./data/users_tickets")
 const tickets_db = new Database("./data/tickets")
 import config from "./config.js"
 import slashCommands from './commands.json' assert {type: 'json'};
-const bot = new Eris(config["token"], {
+const bot = new Eris(config["token"] || process.env.token, {
     intents: 32509,
     allowedMentions: {
         everyone: true,
@@ -16,7 +16,7 @@ const bot = new Eris(config["token"], {
 bot.on("error", console.log)
 bot.on("ready", async () => {
     console.log("\u001b[32m▶▷ \u001b[0m\u001b[0m\u001b[40;1m\u001b[34;1mBot Ready!\u001b[0m \u001b[32m◁◀ \u001b[0m");
-    await bot.editStatus("online", { type: 0, name: config["status"] || "By Shuruhatik" })
+    await bot.editStatus("online", { type: 0, name: config["status"] || process.env.status ||"By Shuruhatik" })
     await bot.bulkEditCommands(slashCommands)
 })
 
@@ -367,3 +367,4 @@ process.on('unhandledRejection', (reason, p) => {
 });
 
 bot.connect();
+
