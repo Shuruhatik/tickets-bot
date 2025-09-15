@@ -1,10 +1,11 @@
 {
   "name": "tickets-bot",
-  "version": "1.0.1",
+  "version": "1.1.1",
   "description": "Bot By Shuruhatik",
   "type": "module",
   "dependencies": {
     "eris": "^0.17.1",
-    "st.db": "^5.1.4"
+    "st.db": "^5.1.4",
+    "express": "^5.1.0"
   }
 }
