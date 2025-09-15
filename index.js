@@ -1,10 +1,13 @@
 import Eris from "eris";
+import express from 'express';
 import { Database } from "st.db"
 const counts_db = new Database("./data/count")
 const user_tickets_db = new Database("./data/users_tickets")
 const tickets_db = new Database("./data/tickets")
 import config from "./config.js"
 import slashCommands from './commands.json' assert {type: 'json'};
+const app = express();
+const port = process.env.PORT || 3000;
 const bot = new Eris(config["token"] || process.env.token, {
     intents: 32509,
     allowedMentions: {
@@ -366,5 +369,12 @@ process.on('unhandledRejection', (reason, p) => {
     console.log(err, origin);
 });
 
-bot.connect();
+app.get('/', (req, res) => {
+  res.send('✅ Bot is running!');
+});
+
+app.listen(port, () => {
+  console.log(`Server is listening on port ${port}`);
+  bot.connect();
+});
 
